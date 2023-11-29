@@ -24,13 +24,13 @@ public class Being <T> extends Entity{
 
             scan.useDelimiter(",\\s*");
 
-            int n = r.nextInt(4)+1;
+            int n = r.nextInt(3000)+1;
 
             String name = "";
-
             for(int i = 0; i < n; i++){
                 if(scan.hasNext()){
                     name = scan.next();
+                    name = name.replace("\"" , "");
                 }
             }
 

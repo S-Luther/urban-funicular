@@ -1,4 +1,5 @@
 package App;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -23,7 +24,7 @@ public class SpaceStation <T> {
     private ArrayList<SpaceStation> neighbors = new ArrayList<>();
     private int Team;
 
-    public SpaceStation(String s, T culture) {
+    public SpaceStation(String s, T culture) throws FileNotFoundException {
         System.out.println(s + " Station created!");
 
         Culture = culture;
@@ -32,7 +33,7 @@ public class SpaceStation <T> {
 
     }
 
-    private void populate(String s){
+    private void populate(String s) throws FileNotFoundException{
                 boolean go = true;
 
         int counter = 0;

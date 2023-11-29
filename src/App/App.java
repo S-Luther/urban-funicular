@@ -1,5 +1,7 @@
 package App;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
@@ -23,13 +25,36 @@ public class App {
 
     
     public static void main(String[] args) throws IOException {
+        Random r = new Random();
+        Scanner scan = null;
+        try {
+            
+            scan = new Scanner(new BufferedReader(new FileReader("C:\\Users\\samuelluther\\Code\\SpaceBase\\src\\App\\name.txt")));
 
+            scan.useDelimiter(",\\s*");
 
+            int n = r.nextInt(4)+1;
+
+            String name = "";
+
+            for(int i = 0; i < n; i++){
+                if(scan.hasNext()){
+                    name = scan.next();
+                }
+            }
+
+            System.out.println(name + " has entered the base.");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        finally{
+            scan.close();
+        }
 
         boolean go = true;
 
         int counter = 0;
-        Random r = new Random();
+
         while(go){
             switch(r.nextInt(11)){
                 case 0:
