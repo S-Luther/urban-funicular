@@ -11,7 +11,7 @@ public class Zerg implements Culture{
         if(r.nextBoolean()){
             a = stance.AGGRESSIVE;
         } else {
-            a = stance.AGGRESSIVE;
+            a = stance.DEFENSIVE;
         }
         return a;
     }
