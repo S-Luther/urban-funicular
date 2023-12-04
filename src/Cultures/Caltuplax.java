@@ -14,6 +14,9 @@ public class Caltuplax implements Culture{
 
         return stance.AGGRESSIVE;
     }
+    public String cultureName(){
 
+        return "Caltuplax";
+    }
 
 }

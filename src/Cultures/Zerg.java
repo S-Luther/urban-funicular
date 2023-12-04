@@ -19,4 +19,7 @@ public class Zerg implements Culture{
         stance a = stance.AGGRESSIVE;
         return a;
     }
+    public String cultureName() {
+        return "Zerg";
+    }
 }

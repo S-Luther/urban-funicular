@@ -27,4 +27,7 @@ public class Ryloth implements Culture{
                 return stance.AGGRESSIVE;
             }
     }
+    public String cultureName() {
+        return "Ryloth";
+    }
 }

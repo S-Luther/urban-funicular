@@ -23,4 +23,9 @@ public class Colariat implements Culture{
         }
          
     }
+
+    public String cultureName() {
+
+        return "Colariat";
+    }
 }

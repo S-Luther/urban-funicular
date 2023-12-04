@@ -15,4 +15,8 @@ public class Gregory implements Culture{
     public stance diplomacy(){
        return stance.BALANCED;
     }
+    @Override
+    public String cultureName() {
+      return "Gregory";
+    }
 }

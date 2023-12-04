@@ -20,6 +20,10 @@ public class Umi implements Culture{
         return stance.BALANCED;
     }
 
+    public String cultureName(){
+        return "Umi";
+    }
+
 
 
 }

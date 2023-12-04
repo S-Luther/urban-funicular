@@ -22,4 +22,8 @@ public class Tolaxian implements Culture{
     public stance diplomacy(){
         return stance.BALANCED;
     }
+
+    public String cultureName(){
+        return "Tolaxian";
+    }
 }

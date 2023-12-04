@@ -8,5 +8,6 @@ public interface Culture {
 
     stance strategy();
     stance diplomacy();
+    String cultureName();
     
 }

@@ -24,39 +24,15 @@ public class App {
     static ArrayList<SpaceStation> Stations = new ArrayList<>();
 
     
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Random r = new Random();
-        Scanner scan = null;
-        try {
-            
-            scan = new Scanner(new BufferedReader(new FileReader("C:\\Users\\samuelluther\\Code\\SpaceBase\\src\\App\\name.txt")));
-
-            scan.useDelimiter(",\\s*");
-
-            int n = r.nextInt(4)+1;
-
-            String name = "";
-
-            for(int i = 0; i < n; i++){
-                if(scan.hasNext()){
-                    name = scan.next();
-                }
-            }
-
-            System.out.println(name + " has entered the base.");
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-        finally{
-            scan.close();
-        }
 
         boolean go = true;
 
         int counter = 0;
 
-        while(go){
-            switch(r.nextInt(11)){
+        for(int i = 0; i< 2; i++){
+            switch(r.nextInt(10)+1){
                 case 0:
                     Stations.add(new SpaceStation<Tolaxian>("Tolaxian", new Tolaxian()));
                 case 1:
@@ -84,6 +60,13 @@ public class App {
             if(counter > 10){
                 go = false;
             }
+        }
+
+        while(go){
+            for(SpaceStation s: Stations){
+                s.simulate();
+            }
+
         }
     }
 }

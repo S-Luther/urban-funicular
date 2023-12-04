@@ -14,4 +14,7 @@ public class Yoshi implements Culture {
     public stance diplomacy(){
         return stance.DEFENSIVE;
     }
+    public String cultureName(){
+        return "Yoshi";
+    }
 }

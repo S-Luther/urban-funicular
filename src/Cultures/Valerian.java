@@ -18,4 +18,8 @@ public class Valerian implements Culture{
     public stance diplomacy(){
         return stance.DEFENSIVE;
     }
+
+    public String cultureName() {
+        return "Valerian";
+    }
 }

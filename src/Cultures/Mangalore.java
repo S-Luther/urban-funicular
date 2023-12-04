@@ -10,5 +10,7 @@ public class Mangalore implements Culture{
         return stance.AGGRESSIVE;
     }
 
-
+    public String cultureName(){
+        return "Mangalore";
+    }
 }
